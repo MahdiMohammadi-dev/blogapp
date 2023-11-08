@@ -22,55 +22,55 @@ class Category {
       {required this.id, required this.title, required this.imageFileName});
 }
 
-class AppDatabase {
+class StoryData {
   static List<Story> get stories {
     return [
       Story(
           id: 1001,
           name: 'Emilia',
-          imageFileName: 'story_1.jpg',
+          imageFileName: 'assets/img/stories/story_1.jpg',
           iconFileName: 'category_1.png',
           isViewed: false),
       Story(
           id: 1002,
           name: 'Richard',
-          imageFileName: 'story_2.jpg',
+          imageFileName: 'assets/img/stories/story_2.jpg',
           iconFileName: 'category_2.png',
           isViewed: false),
       Story(
           id: 1003,
           name: 'Jasmine',
-          imageFileName: 'story_3.jpg',
+          imageFileName: 'assets/img/stories/story_3.jpg',
           iconFileName: 'category_3.png',
           isViewed: true),
       Story(
           id: 1004,
           name: 'Lucas',
-          imageFileName: 'story_4.jpg',
+          imageFileName: 'assets/img/stories/story_4.jpg',
           iconFileName: 'category_4.png',
           isViewed: false),
       Story(
           id: 1005,
           name: 'Hendri',
-          imageFileName: 'story_5.jpg',
+          imageFileName: 'assets/img/stories/story_5.jpg',
           iconFileName: 'category_2.png',
-          isViewed: false),
+          isViewed: true),
       Story(
           id: 1006,
           name: 'Hendri',
-          imageFileName: 'story_6.jpg',
+          imageFileName: 'assets/img/stories/story_6.jpg',
           iconFileName: 'category_1.png',
           isViewed: false),
       Story(
           id: 1007,
           name: 'Hendri',
-          imageFileName: 'story_7.jpg',
+          imageFileName: 'assets/img/stories/story_7.jpg',
           iconFileName: 'category_4.png',
-          isViewed: false),
+          isViewed: true),
       Story(
           id: 1008,
           name: 'Hendri',
-          imageFileName: 'story_8.jpg',
+          imageFileName: 'assets/img/stories/story_8.jpg',
           iconFileName: 'category_3.png',
           isViewed: false),
     ];
