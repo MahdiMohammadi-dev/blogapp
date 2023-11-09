@@ -1,5 +1,6 @@
-import 'package:blogapp/carousel/carousel_slider.dart';
 import 'package:blogapp/fake_data_model.dart';
+import 'package:blogapp/widgets/category_carousel.dart';
+import 'package:blogapp/widgets/post_list.dart';
 import 'package:blogapp/widgets/story_section.dart';
 import 'package:flutter/material.dart';
 
@@ -44,34 +45,20 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               StorySection(size: size, stories: stories, textTheme: textTheme),
-              CategoryList(),
+              const SizedBox(
+                height: 15,
+              ),
+              CategoryList(
+                textTheme: textTheme,
+              ),
+              PostList(textTheme: textTheme),
+              const SizedBox(
+                height: 16,
+              ),
             ],
           ),
         ),
       ),
     );
-  }
-}
-
-class CategoryList extends StatelessWidget {
-  const CategoryList({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final categoryList = StoryData.categories;
-    return CarouselSlider.builder(
-        itemCount: categoryList.length,
-        itemBuilder: (context, index, realIndex) {
-          return Container(
-            width: 70,
-            height: 150,
-            color: Colors.red,
-          );
-        },
-        options: CarouselOptions(
-            scrollDirection: Axis.horizontal,
-            scrollPhysics: BouncingScrollPhysics()));
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyTextTheme {
-  final TextTheme textTheme = const TextTheme(
+  final TextTheme textTheme = TextTheme(
       titleLarge: TextStyle(
         fontFamily: 'avenir',
         fontWeight: FontWeight.w700,
@@ -17,5 +17,10 @@ class MyTextTheme {
       bodyMedium: TextStyle(
         fontFamily: 'avenir',
         color: Color.fromARGB(255, 77, 83, 99),
-      ));
+      ),
+      titleSmall: TextStyle(
+          fontFamily: 'avenir',
+          color: Colors.white,
+          fontSize: 20,
+          fontWeight: FontWeight.w700));
 }

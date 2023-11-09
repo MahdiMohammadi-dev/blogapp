@@ -13,6 +13,25 @@ class Story {
       required this.isViewed});
 }
 
+class PostData {
+  final int id;
+  final String caption;
+  final String title;
+  final String likes;
+  final String time;
+  final bool isBookmarked;
+  final String imageFileName;
+
+  PostData(
+      {required this.id,
+      required this.caption,
+      required this.title,
+      required this.likes,
+      required this.time,
+      required this.isBookmarked,
+      required this.imageFileName});
+}
+
 class Category {
   final int id;
   final String title;
@@ -20,6 +39,55 @@ class Category {
 
   Category(
       {required this.id, required this.title, required this.imageFileName});
+}
+
+class PostDataList {
+  static List<Category> get categories {
+    return [
+      Category(
+        id: 101,
+        title: 'Technology',
+        imageFileName: 'large_post_1.jpg',
+      ),
+      Category(id: 102, title: 'Adventure', imageFileName: 'large_post_2.jpg'),
+      Category(id: 103, title: 'Sports', imageFileName: 'large_post_3.jpg'),
+      Category(id: 104, title: 'Politics', imageFileName: 'large_post_4.jpg'),
+      Category(id: 105, title: 'Science', imageFileName: 'large_post_5.jpg'),
+      Category(
+          id: 106,
+          title: 'Car and Motorcycles',
+          imageFileName: 'large_post_6.jpg'),
+    ];
+  }
+
+  static List<PostData> get posts {
+    return [
+      PostData(
+          id: 1,
+          title: 'BMW M5 Competition Review 2021',
+          caption: 'TOP GEAR',
+          isBookmarked: false,
+          likes: '3.1k',
+          time: '1hr ago',
+          imageFileName: 'small_post_1.jpg'),
+      PostData(
+          id: 0,
+          title: 'MacBook Pro with M1 Pro and M1 Max review',
+          caption: 'THE VERGE',
+          isBookmarked: false,
+          likes: '1.2k',
+          time: '2hr ago',
+          imageFileName: 'small_post_2.jpg'),
+      PostData(
+          id: 2,
+          title: 'Step design sprint for UX beginner',
+          caption: 'Ux Design',
+          isBookmarked: true,
+          likes: '2k',
+          time: '41hr ago',
+          imageFileName: 'small_post_3.jpg'),
+    ];
+  }
 }
 
 class StoryData {
@@ -73,24 +141,6 @@ class StoryData {
           imageFileName: 'assets/img/stories/story_8.jpg',
           iconFileName: 'category_3.png',
           isViewed: false),
-    ];
-  }
-
-  static List<Category> get categories {
-    return [
-      Category(
-        id: 101,
-        title: 'Technology',
-        imageFileName: 'large_post_1.jpg',
-      ),
-      Category(id: 102, title: 'Adventure', imageFileName: 'large_post_2.jpg'),
-      Category(id: 103, title: 'Sports', imageFileName: 'large_post_3.jpg'),
-      Category(id: 104, title: 'Politics', imageFileName: 'large_post_4.jpg'),
-      Category(id: 105, title: 'Science', imageFileName: 'large_post_5.jpg'),
-      Category(
-          id: 106,
-          title: 'Car and Motorcycles',
-          imageFileName: 'large_post_6.jpg'),
     ];
   }
 }
