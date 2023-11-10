@@ -1,4 +1,5 @@
 import 'package:blogapp/fake_data_model.dart';
+import 'package:blogapp/gen/assets.gen.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
@@ -39,7 +40,7 @@ class StorySection extends StatelessWidget {
                       bottom: 0,
                       right: 0,
                       child: Image.asset(
-                        'assets/img/icons/${stories[index].iconFileName}',
+                        stories[index].iconFileName,
                         width: 30,
                         height: 30,
                       ),

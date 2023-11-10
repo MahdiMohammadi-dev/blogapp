@@ -1,3 +1,5 @@
+import 'package:blogapp/gen/assets.gen.dart';
+
 class Story {
   final int id;
   final String name;
@@ -47,16 +49,33 @@ class PostDataList {
       Category(
         id: 101,
         title: 'Technology',
-        imageFileName: 'large_post_1.jpg',
+        imageFileName: Assets.img.posts.large.largePost1.path,
       ),
-      Category(id: 102, title: 'Adventure', imageFileName: 'large_post_2.jpg'),
-      Category(id: 103, title: 'Sports', imageFileName: 'large_post_3.jpg'),
-      Category(id: 104, title: 'Politics', imageFileName: 'large_post_4.jpg'),
-      Category(id: 105, title: 'Science', imageFileName: 'large_post_5.jpg'),
       Category(
-          id: 106,
-          title: 'Car and Motorcycles',
-          imageFileName: 'large_post_6.jpg'),
+        id: 102,
+        title: 'Adventure',
+        imageFileName: Assets.img.posts.large.largePost2.path,
+      ),
+      Category(
+        id: 103,
+        title: 'Sports',
+        imageFileName: Assets.img.posts.large.largePost3.path,
+      ),
+      Category(
+        id: 104,
+        title: 'Politics',
+        imageFileName: Assets.img.posts.large.largePost4.path,
+      ),
+      Category(
+        id: 105,
+        title: 'Science',
+        imageFileName: Assets.img.posts.large.largePost5.path,
+      ),
+      Category(
+        id: 106,
+        title: 'Car and Motorcycles',
+        imageFileName: Assets.img.posts.large.largePost6.path,
+      ),
     ];
   }
 
@@ -69,7 +88,7 @@ class PostDataList {
           isBookmarked: false,
           likes: '3.1k',
           time: '1hr ago',
-          imageFileName: 'small_post_1.jpg'),
+          imageFileName: Assets.img.posts.small.smallPost1.path),
       PostData(
           id: 0,
           title: 'MacBook Pro with M1 Pro and M1 Max review',
@@ -77,7 +96,7 @@ class PostDataList {
           isBookmarked: false,
           likes: '1.2k',
           time: '2hr ago',
-          imageFileName: 'small_post_2.jpg'),
+          imageFileName: Assets.img.posts.small.smallPost2.path),
       PostData(
           id: 2,
           title: 'Step design sprint for UX beginner',
@@ -85,7 +104,7 @@ class PostDataList {
           isBookmarked: true,
           likes: '2k',
           time: '41hr ago',
-          imageFileName: 'small_post_3.jpg'),
+          imageFileName: Assets.img.posts.small.smallPost4.path),
     ];
   }
 }
@@ -96,50 +115,50 @@ class StoryData {
       Story(
           id: 1001,
           name: 'Emilia',
-          imageFileName: 'assets/img/stories/story_1.jpg',
-          iconFileName: 'category_1.png',
+          imageFileName: Assets.img.stories.story1.path,
+          iconFileName: Assets.img.icons.category1.path,
           isViewed: false),
       Story(
           id: 1002,
           name: 'Richard',
-          imageFileName: 'assets/img/stories/story_2.jpg',
-          iconFileName: 'category_2.png',
+          imageFileName: Assets.img.stories.story2.path,
+          iconFileName: Assets.img.icons.category2.path,
           isViewed: false),
       Story(
           id: 1003,
           name: 'Jasmine',
-          imageFileName: 'assets/img/stories/story_3.jpg',
-          iconFileName: 'category_3.png',
+          imageFileName: Assets.img.stories.story3.path,
+          iconFileName: Assets.img.icons.category3.path,
           isViewed: true),
       Story(
           id: 1004,
           name: 'Lucas',
-          imageFileName: 'assets/img/stories/story_4.jpg',
-          iconFileName: 'category_4.png',
+          imageFileName: Assets.img.stories.story4.path,
+          iconFileName: Assets.img.icons.category4.path,
           isViewed: false),
       Story(
           id: 1005,
           name: 'Hendri',
-          imageFileName: 'assets/img/stories/story_5.jpg',
-          iconFileName: 'category_2.png',
+          imageFileName: Assets.img.stories.story5.path,
+          iconFileName: Assets.img.icons.category4.path,
           isViewed: true),
       Story(
           id: 1006,
           name: 'Hendri',
-          imageFileName: 'assets/img/stories/story_6.jpg',
-          iconFileName: 'category_1.png',
+          imageFileName: Assets.img.stories.story6.path,
+          iconFileName: Assets.img.icons.category1.path,
           isViewed: false),
       Story(
           id: 1007,
           name: 'Hendri',
-          imageFileName: 'assets/img/stories/story_7.jpg',
-          iconFileName: 'category_4.png',
+          imageFileName: Assets.img.stories.story7.path,
+          iconFileName: Assets.img.icons.category4.path,
           isViewed: true),
       Story(
           id: 1008,
           name: 'Hendri',
-          imageFileName: 'assets/img/stories/story_8.jpg',
-          iconFileName: 'category_3.png',
+          imageFileName: Assets.img.stories.story8.path,
+          iconFileName: Assets.img.icons.category3.path,
           isViewed: false),
     ];
   }

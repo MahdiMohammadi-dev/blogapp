@@ -1,7 +1,10 @@
 import 'package:blogapp/fake_data_model.dart';
+import 'package:blogapp/gen/assets.gen.dart';
+import 'package:blogapp/widgets/bottom_nav.dart';
 import 'package:blogapp/widgets/category_carousel.dart';
 import 'package:blogapp/widgets/post_list.dart';
 import 'package:blogapp/widgets/story_section.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -30,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                       style: textTheme.titleMedium,
                     ),
                     Image.asset(
-                      'assets/img/icons/notification.png',
+                      Assets.img.icons.notification.path,
                       width: 32,
                       height: 32,
                     )
@@ -59,6 +62,12 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNav(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.blue,
+          child: const Icon(CupertinoIcons.add),
+          onPressed: () {}),
     );
   }
 }

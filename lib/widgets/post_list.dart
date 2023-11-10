@@ -59,7 +59,7 @@ class PostList extends StatelessWidget {
                       ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                           child: Image.asset(
-                            'assets/img/posts/small/${postData[index].imageFileName}',
+                            postData[index].imageFileName,
                             width: 100,
                             height: 100,
                           )),
@@ -115,8 +115,10 @@ class PostList extends StatelessWidget {
                                 Expanded(
                                   child: Container(
                                     alignment: Alignment.centerRight,
-                                    child: const Icon(
-                                      CupertinoIcons.bookmark,
+                                    child: Icon(
+                                      postData[index].isBookmarked
+                                          ? CupertinoIcons.bookmark_fill
+                                          : CupertinoIcons.bookmark,
                                       size: 16,
                                     ),
                                   ),

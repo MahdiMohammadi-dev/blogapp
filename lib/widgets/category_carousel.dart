@@ -42,7 +42,7 @@ class CategoryList extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(35),
                     child: Image.asset(
-                      'assets/img/posts/large/${categoryList[index].imageFileName}',
+                      categoryList[index].imageFileName,
                       fit: BoxFit.cover,
                     ),
                   ),
