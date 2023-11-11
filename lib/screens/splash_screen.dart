@@ -1,5 +1,6 @@
 import 'package:blogapp/gen/assets.gen.dart';
 import 'package:blogapp/screens/home_screen.dart';
+import 'package:blogapp/screens/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -19,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => HomeScreen(),
+              builder: (context) => OnBoradingScreen(),
             ));
       },
     );
