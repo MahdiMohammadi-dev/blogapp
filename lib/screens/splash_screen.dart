@@ -15,7 +15,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   Future gotoHomePage() async {
     return await Future.delayed(
-      Duration(seconds: 2),
+      Duration(seconds: 3),
       () {
         Navigator.pushReplacement(
             context,
@@ -48,9 +48,9 @@ class _SplashScreenState extends State<SplashScreen> {
               effects: const [
                 // FadeEffect(),
                 ShimmerEffect(
-                    delay: Duration(milliseconds: 400),
+                    delay: Duration(milliseconds: 100),
                     curve: Curves.easeIn,
-                    duration: Duration(milliseconds: 1200))
+                    duration: Duration(milliseconds: 2500))
               ],
               child:
                   Center(child: SvgPicture.asset(Assets.img.icons.logo.path))),

@@ -1,5 +1,5 @@
 import 'package:blogapp/gen/assets.gen.dart';
-import 'package:blogapp/screens/home_screen.dart';
+import 'package:blogapp/screens/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -80,7 +80,7 @@ class _OnBoradingScreenState extends State<OnBoradingScreen> {
                         if (pageController.page == 2) {
                           Navigator.of(context)
                               .pushReplacement(MaterialPageRoute(
-                            builder: (context) => HomeScreen(),
+                            builder: (context) => LoginScreen(),
                           ));
                         }
                       },

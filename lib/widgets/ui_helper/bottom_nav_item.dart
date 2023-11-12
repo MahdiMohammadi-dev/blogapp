@@ -5,9 +5,11 @@ class BottomNavItem extends StatelessWidget {
       {super.key,
       required this.iconPath,
       required this.titleIcon,
-      required this.textTheme});
+      required this.textTheme,
+      required this.onTap});
   String iconPath;
   String titleIcon;
+  void Function()? onTap;
 
   TextTheme textTheme;
   @override
@@ -16,8 +18,11 @@ class BottomNavItem extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SizedBox(
-          child: Image.asset(iconPath),
+        GestureDetector(
+          onTap: onTap,
+          child: SizedBox(
+            child: Image.asset(iconPath),
+          ),
         ),
         const SizedBox(
           height: 8,
@@ -25,7 +30,7 @@ class BottomNavItem extends StatelessWidget {
         Text(
           titleIcon,
           style: textTheme.labelSmall,
-        )
+        ),
       ],
     );
   }

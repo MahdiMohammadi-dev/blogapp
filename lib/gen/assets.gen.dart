@@ -14,10 +14,21 @@ import 'package:flutter/services.dart';
 class $AssetsImgGen {
   const $AssetsImgGen();
 
+  /// File path: assets/img/Thumbs.svg
+  SvgGenImage get thumbs => const SvgGenImage('assets/img/Thumbs.svg');
+
   $AssetsImgBackgroundGen get background => const $AssetsImgBackgroundGen();
   $AssetsImgIconsGen get icons => const $AssetsImgIconsGen();
   $AssetsImgPostsGen get posts => const $AssetsImgPostsGen();
+
+  /// File path: assets/img/single_post.png
+  AssetGenImage get singlePost =>
+      const AssetGenImage('assets/img/single_post.png');
+
   $AssetsImgStoriesGen get stories => const $AssetsImgStoriesGen();
+
+  /// List of all assets
+  List<dynamic> get values => [thumbs, singlePost];
 }
 
 class $AssetsImgBackgroundGen {
