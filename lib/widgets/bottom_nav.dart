@@ -3,8 +3,23 @@ import 'package:blogapp/screens/article_screen.dart';
 import 'package:blogapp/widgets/ui_helper/bottom_nav_item.dart';
 import 'package:flutter/material.dart';
 
-class BottomNav extends StatelessWidget {
+class BottomNavigationIndex {
+  BottomNavigationIndex._();
+  static const splashIndex = 0;
+  static const homeIndex = 1;
+  static const articleIndex = 2;
+  static const profileIndex = 3;
+}
+
+class BottomNav extends StatefulWidget {
   BottomNav({super.key});
+
+  @override
+  State<BottomNav> createState() => _BottomNavState();
+}
+
+class _BottomNavState extends State<BottomNav> {
+  var baseIndex = BottomNavigationIndex.splashIndex;
 
   @override
   Widget build(BuildContext context) {
@@ -23,23 +38,22 @@ class BottomNav extends StatelessWidget {
                 iconPath: Assets.img.icons.home.path,
                 titleIcon: 'Home',
                 textTheme: textTheme,
-                onTap: () {},
+                onTap: () =>
+                    changeIndex(index: BottomNavigationIndex.homeIndex),
               ),
               BottomNavItem(
                 iconPath: Assets.img.icons.articles.path,
                 titleIcon: 'Articles',
                 textTheme: textTheme,
-                onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const ArticleScreen(),
-                  ));
-                },
+                onTap: () =>
+                    changeIndex(index: BottomNavigationIndex.articleIndex),
               ),
               BottomNavItem(
                 iconPath: Assets.img.icons.search.path,
                 titleIcon: 'Search',
                 textTheme: textTheme,
-                onTap: () {},
+                onTap: () =>
+                    changeIndex(index: BottomNavigationIndex.profileIndex),
               ),
               BottomNavItem(
                 iconPath: Assets.img.icons.menu.path,
@@ -50,5 +64,11 @@ class BottomNav extends StatelessWidget {
             ],
           )),
     );
+  }
+
+  void changeIndex({required index}) {
+    setState(() {
+      baseIndex = index;
+    });
   }
 }
